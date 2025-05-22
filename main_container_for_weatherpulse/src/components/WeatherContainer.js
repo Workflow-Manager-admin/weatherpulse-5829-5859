@@ -47,11 +47,12 @@ const WeatherContainer = () => {
 
   return (
     <div className={`weather-container ${getContainerClass()}`}>
-      {/* Weather animations based on current condition */}
+      {/* Weather animations based on current condition - positioned as background */}
       <div className="weather-animation-backdrop">
         <WeatherAnimations condition={currentCondition} />
       </div>
       
+      {/* Weather content - positioned in foreground */}
       <div className="weather-content">
         {/* Demo controls - for changing weather conditions */}
         <div className="weather-controls">
