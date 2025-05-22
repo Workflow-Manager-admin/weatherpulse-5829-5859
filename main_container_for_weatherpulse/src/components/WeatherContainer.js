@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import WeatherAnimations from './animations/WeatherAnimations';
 import WeatherDetails from './WeatherDetails';
 import WeatherForecast from './WeatherForecast';
-import mockWeatherData, { getRandomWeatherCondition } from '../data/mockWeatherData';
+import mockWeatherData from '../data/mockWeatherData';
 import './WeatherContainer.css';
 
 /**
