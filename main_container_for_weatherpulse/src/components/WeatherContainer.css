@@ -116,9 +116,17 @@
 .detail-item {
   display: flex;
   align-items: center;
-  padding: 12px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detail-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .detail-item i {
