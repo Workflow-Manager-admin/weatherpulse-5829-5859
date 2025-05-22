@@ -11,8 +11,8 @@ import './WeatherContainer.css';
  * @returns {JSX.Element}
  */
 const WeatherContainer = () => {
-  // Initial state from mock data
-  const [weatherData, setWeatherData] = useState(mockWeatherData);
+  // Initial state from mock data - use the default city (San Francisco)
+  const [weatherData, setWeatherData] = useState(mockWeatherData["san-francisco"]);
   
   // State for the current condition (for demo/animation purposes)
   const [currentCondition, setCurrentCondition] = useState(weatherData.current.weather_condition);

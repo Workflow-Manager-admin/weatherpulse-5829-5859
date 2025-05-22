@@ -155,7 +155,7 @@
   background-color: white;
   border-radius: 50%;
   opacity: 0.8;
-  animation: snowfall linear infinite;
+  animation: snowfall 5s linear infinite;
 }
 
 @keyframes snowfall {
