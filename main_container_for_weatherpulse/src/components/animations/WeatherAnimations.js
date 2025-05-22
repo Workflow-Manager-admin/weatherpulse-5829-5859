@@ -31,6 +31,9 @@ const WeatherAnimations = ({ condition = "Cloudy" }) => {
         );
       }
       setSunRays(rays);
+    } else {
+      // Clean up sun rays when condition changes
+      setSunRays([]);
     }
   }, [condition]);
 
