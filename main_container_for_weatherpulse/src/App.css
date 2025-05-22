@@ -1,6 +1,11 @@
+/* Import Font Awesome for weather icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
 :root {
   --kavia-orange: #E87A41;
   --kavia-dark: #1A1A1A;
+  --weather-gradient-start: #2C3E50;
+  --weather-gradient-end: #203046;
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
@@ -9,10 +14,12 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--kavia-dark);
+  background: linear-gradient(to bottom, var(--weather-gradient-start), var(--weather-gradient-end));
+  background-attachment: fixed;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 .app {
@@ -22,12 +29,11 @@ body {
 }
 
 .navbar {
-  background-color: var(--kavia-dark);
+  background-color: transparent;
   padding: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-color);
   position: fixed;
   top: 0;
   width: 100%;
@@ -55,35 +61,23 @@ body {
   box-sizing: border-box;
 }
 
-.hero {
-  padding-top: 120px;
-  padding-bottom: 64px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
+.weather-app {
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
-.subtitle {
-  color: var(--kavia-orange);
-  font-weight: 500;
-  font-size: 1.1rem;
-}
-
-.title {
-  font-size: 3.5rem;
+.app-title {
+  font-size: 2.2rem;
   font-weight: 600;
-  line-height: 1.2;
-  margin: 0;
+  margin: 0 0 10px;
+  text-align: center;
 }
 
-.description {
+.app-subtitle {
   font-size: 1.1rem;
-  line-height: 1.5;
   color: var(--text-secondary);
-  max-width: 600px;
-  margin-bottom: 16px;
+  margin: 0 0 40px;
+  text-align: center;
 }
 
 .btn {
@@ -105,4 +99,75 @@ body {
 .btn-large {
   padding: 12px 24px;
   font-size: 1.1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-button {
+  padding: 12px 20px;
+  background: var(--kavia-orange);
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #FF8B4D;
+}
+
+/* Footer styles */
+.footer {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 1.8rem;
+  }
+  
+  .app-subtitle {
+    font-size: 1rem;
+  }
+  
+  .search-bar {
+    flex-direction: column;
+  }
+  
+  .search-input {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .search-button {
+    width: 100%;
+    border-radius: 4px;
+  }
 }
