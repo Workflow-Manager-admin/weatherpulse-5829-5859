@@ -40,7 +40,7 @@
 /* Weather content layout */
 .weather-content {
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 /* Location and current weather */
