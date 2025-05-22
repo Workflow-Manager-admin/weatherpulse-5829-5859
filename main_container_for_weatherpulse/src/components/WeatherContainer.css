@@ -202,10 +202,12 @@
 .hourly-item {
   flex: 0 0 80px;
   text-align: center;
-  padding: 12px 5px;
+  padding: 14px 6px;
   margin: 0 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
 }
 
 .forecast-time {
