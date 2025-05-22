@@ -8,10 +8,12 @@ import React from 'react';
  * @param {Array} props.dailyForecast - Array of daily forecast data
  * @returns {JSX.Element}
  */
-const WeatherForecast = ({ hourlyForecast, dailyForecast }) => {
+const WeatherForecast = ({ hourlyForecast = [], dailyForecast = [] }) => {
   // Helper function to get weather icon class
   const getWeatherIconClass = (condition) => {
-    switch (condition?.toLowerCase()) {
+    if (!condition) return 'fas fa-cloud'; // Default icon if condition is undefined
+    
+    switch (condition.toLowerCase()) {
       case 'sunny':
         return 'fas fa-sun';
       case 'cloudy':
