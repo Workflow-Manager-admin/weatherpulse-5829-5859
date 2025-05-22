@@ -8,7 +8,7 @@ import './WeatherAnimations.css';
  * @param {string} props.condition - The weather condition (Sunny, Cloudy, Rain, etc.)
  * @returns {JSX.Element}
  */
-const WeatherAnimations = ({ condition }) => {
+const WeatherAnimations = ({ condition = "Cloudy" }) => {
   const [raindrops, setRaindrops] = useState([]);
   const [snowflakes, setSnowflakes] = useState([]);
   const [sunRays, setSunRays] = useState([]);
