@@ -110,7 +110,7 @@
   width: 2px;
   height: 15px;
   opacity: 0.8;
-  animation: rain-fall linear infinite;
+  animation: rain-fall 1s linear infinite;
 }
 
 @keyframes rain-fall {
